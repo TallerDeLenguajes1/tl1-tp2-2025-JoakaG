@@ -10,7 +10,7 @@ double vt[N];
 double *pvt = vt;
 for(i = 0;i<N; i++)
 {
-pvt[i]=1+rand()%100;
+*(pvt+i)=1+rand()%100;
 
 printf("%f ", vt[i]);
 
