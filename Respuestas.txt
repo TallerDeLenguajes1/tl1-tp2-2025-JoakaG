@@ -1,2 +1,4 @@
-__2f__
+2f_
 No podemos ver el archivo ya que nos movimos de rama, el archivo tp2_1_2.c fue trabajado y guardado en la rama Opción 2.
+
+La diferencia es que la rama main se encuentra separada de la rama Opción 2, el ultimo commit realizado en main fue después que el ultimo commit realizado en rama Opción 2
