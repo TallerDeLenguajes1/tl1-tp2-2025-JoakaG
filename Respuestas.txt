@@ -1,0 +1,2 @@
+__2f__
+No podemos ver el archivo ya que nos movimos de rama, el archivo tp2_1_2.c fue trabajado y guardado en la rama Opción 2.
