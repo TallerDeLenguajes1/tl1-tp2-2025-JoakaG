@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 struct compu {
  int velocidad; // Velocidad de procesamiento en GHz (valor entre 1 y 3)
  int anio; // Año de fabricación (valor entre 2015 y 2024)
@@ -13,5 +14,22 @@ struct compu {
 
 int main(){
 srand(time(NULL));
+char tipos[6][10] = {"Intel", "AMD", "Celeron", "Athlon", "Core","Pentium"};
+Compu compus[] = {
+    {rand() % 3 + 1, rand() % 10 + 2015, rand() % 8 + 1, tipos[rand() % 6]},
+    {rand() % 3 + 1, rand() % 10 + 2015, rand() % 8 + 1, tipos[rand() % 6]},
+    {rand() % 3 + 1, rand() % 10 + 2015, rand() % 8 + 1, tipos[rand() % 6]},
+    {rand() % 3 + 1, rand() % 10 + 2015, rand() % 8 + 1, tipos[rand() % 6]},
+    {rand() % 3 + 1, rand() % 10 + 2015, rand() % 8 + 1, tipos[rand() % 6]}
+};
+
+    for (int i = 0; i < 5; i++)
+    {
+    printf("---------Compu N%d--------\n Velocidad: %d\n Anio: %d\n Nucleos: %d\n Modelo CPU: %s\n", i+1, compus[i].velocidad, compus[i].anio, compus[i].cantidad_nucleos, compus[i].tipo_cpu);
+        
+    }
+    
+
+
     return 0;
 }
