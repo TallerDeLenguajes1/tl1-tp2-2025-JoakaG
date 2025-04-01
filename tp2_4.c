@@ -12,8 +12,9 @@ struct compu
 
 void listarPCs(Compu compus[], int x);
 void mostrarMasVieja(Compu compus[], int x);
+void mostrarMasVeloz(Compu compus[], int x);
 
-    int main()
+int main()
 {
     srand(time(NULL));
     char tipos[6][10] = {"Intel", "AMD", "Celeron", "Athlon", "Core", "Pentium"};
@@ -26,7 +27,7 @@ void mostrarMasVieja(Compu compus[], int x);
 
     listarPCs(compus, 5);
     mostrarMasVieja(compus, 5);
-
+    mostrarMasVeloz(compus, 5);
     return 0;
 }
 
@@ -50,4 +51,19 @@ void mostrarMasVieja(Compu compus[], int x)
         }
     }
     printf("\n--------Compu mais vieja-------\n Velocidad: %d\n Anio: %d\n Nucleos: %d\n Modelo CPU: %s\n", compus[aux].velocidad, compus[aux].anio, compus[aux].cantidad_nucleos, compus[aux].tipo_cpu);
+}
+
+void mostrarMasVeloz(Compu compus[], int x)
+{
+    int veloz = compus[0].velocidad, aux = 0;
+    for (int i = 0; i < x; i++)
+    {
+        if (veloz < compus[i].velocidad)
+        {
+            veloz = compus[i].velocidad;
+            aux = i;
+        }
+    }
+
+    printf("\n--------Compu mais veloz-------\n Velocidad: %d\n Anio: %d\n Nucleos: %d\n Modelo CPU: %s\n", compus[aux].velocidad, compus[aux].anio, compus[aux].cantidad_nucleos, compus[aux].tipo_cpu);
 }
