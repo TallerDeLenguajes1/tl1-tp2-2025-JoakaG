@@ -5,9 +5,9 @@
 int main()
 {
     srand(time(NULL));
+    #define N 5
+    #define M 7
     int i, j;
-    int N = 4, M = 4;
-
     float mt[N][M];
     float *pmt = mt;
     for (i = 0; i < N; i++)
